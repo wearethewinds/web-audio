@@ -1,0 +1,114 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+#claviature .white, #claviature .black {
+    display: inline-block;
+    border: 1px solid black;
+    vertical-align: top;
+}
+
+.white {
+    width: 30px;
+    height: 200px;
+    position: relative;
+}
+
+.black {
+    width: 20px;
+    height: 150px;
+    background-color: black;
+    position: absolute;
+    left: 22px;
+}
+
+
+.bar {
+    width: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.bar .line {
+    width: 100%;
+    height: 14px;
+    overflow: hidden;
+}
+
+.bar .block {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+
+.bar .block.interconnected {
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    background-color: #0d3349;
+}
+
+.bar .block.start {
+    border-right: 1px solid transparent;
+    background-color: #0d3349;
+}
+
+.bar .block.stop {
+    border-left: 1px solid transparent;
+    background-color: #0d3349;
+}
+
+#recorder {
+    background-color: #EEE;
+    width: 100%;
+    position: relative;
+}
+
+#recorder #timeline {
+    position: absolute;
+    left: 42px;
+    width: calc(100% - 50px);
+    height: 100%;
+}
+
+#recorder #timeline .timeline-line {
+    width: 100px;
+    border-left: 1px solid rgba(77,77,77,.7);
+    display: inline-block;
+    height: 100%;
+}
+
+#recorder #timeline #timer {
+    position: absolute;
+    left: 0;
+    border-color: #a80000;
+}
+
+#recorder .lane {
+    border: 1px solid #777;
+    width: 100%;
+    height: 45px;
+}
+
+#recorder .lane .options {
+    width: 40px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+}
+
+#recorder .lane .options button {
+    background-color: #A80000;
+    color: white;
+}
+
+#recorder .lane .trackcontainer {
+    width: auto;
+    height: 100%;
+    border-left: 3px solid #777;
+    display: inline-block;
+}
